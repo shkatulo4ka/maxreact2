@@ -1,24 +1,17 @@
-import {Route} from 'react-router-dom';
-
 import AllMeetupsPage from './pages/AllMeetups';
 import NewMeetupPage from './pages/NewMeetups';
 import FavouritesPage from './pages/Favourites';
+import {
+   createBrowserRouter,
+   RouterProvider,
+ } from "react-router-dom";
+ 
+ const router = createBrowserRouter([
+   { path: "/", element: <AllMeetupsPage/>},
+   { path: "/favourites", element: <FavouritesPage/>},
+   { path: "/new-meetup", element: <NewMeetupPage/>}
+ ]);
 
-function App() {
-   // localhost: 3000/favourites
-   //my-page.com/
-
-   return (<div> 
-      <Route path='/'>
-         <AllMeetupsPage/>
-      </Route>
-      <Route path='/new-meetup'>
-         <NewMeetupPage/>
-      </Route>
-      <Route path='/favourites'>
-         <FavouritesPage/>
-      </Route>       
-   </div>);
-}
-
+const App = () => <RouterProvider router={router} />
+ 
 export default App

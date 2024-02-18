@@ -1,10 +1,15 @@
-import { Outlet } from 'react-router-dom'
-import MainNavigation from './MainNavigation'
+import classes from './Layout.module.css';
+import { Outlet } from 'react-router-dom';
+import MainNavigation from './MainNavigation';
 
-const Layout = () => {
+const Layout = (props) => {
   return (
-    <div><MainNavigation/><Outlet /></div>
-  )
+    <div><MainNavigation/><Outlet />
+      <main className={classes.main}>
+      {props.children}
+      </main>
+    </div>
+  );
 }
 
-export default Layout
+export default Layout;

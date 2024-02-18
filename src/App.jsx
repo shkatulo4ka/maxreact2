@@ -1,7 +1,6 @@
 import AllMeetupsPage from './pages/AllMeetups';
 import NewMeetupPage from './pages/NewMeetups';
 import FavouritesPage from './pages/Favourites';
-import MainNavigation from './components/layout/MainNavigation';
 import {
    createBrowserRouter,
    RouterProvider,

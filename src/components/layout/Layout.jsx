@@ -2,11 +2,11 @@ import classes from './Layout.module.css';
 import { Outlet } from 'react-router-dom';
 import MainNavigation from './MainNavigation';
 
-const Layout = (props) => {
+const Layout = () => {
   return (
-    <div><MainNavigation/><Outlet />
+    <div><MainNavigation/>
       <main className={classes.main}>
-      {props.children}
+        <Outlet />
       </main>
     </div>
   );

@@ -35,9 +35,9 @@ export const FavouritesContextProvider = (props) => {
         itemIsFavourite: itemIsFavouriteHandler
     };
 
-    return <FavouritesContextProvider value={context}>
+    return <FavouritesContext.Provider value={context}>
         {props.children}
-    </FavouritesContextProvider>
+    </FavouritesContext.Provider>
 }
 
 export default FavouritesContext;
